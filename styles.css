@@ -80,9 +80,31 @@ nav a:hover {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 5% 10%;
-    gap: 4rem;
-    background: var(--gradient-light);
+    padding: 15% 8%;
+    gap: 2rem;
+    height: auto;
+    background: #fff;
+}
+
+.hero-2 {
+    padding-right: 38%;
+    background-image: url(/images/robot.png);
+    background-size: auto 500px;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    perspective: 1000px;
+    background-attachment: fixed;
+}
+
+.hero-2 .hero-content {
+    width: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+}
+
+.hero-2 .hero-content h1 {
+    width: 400px;
 }
 
 .hero-content {
@@ -140,10 +162,10 @@ model-viewer {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     line-height: 1.2;
     margin-bottom: 1.5rem;
-    color: var(--primary);
+    color: #111;
 }
 
 h2 {
@@ -554,10 +576,10 @@ h2 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.device:hover {
+/* .device:hover {
     transform: translateY(-5px);
     box-shadow: 0 30px 50px -15px rgba(0, 0, 0, 0.3);
-}
+} */
 
 .tablet {
     width: 500px;
@@ -565,10 +587,18 @@ h2 {
     transform: rotateY(-5deg);
 }
 
+.tablet:hover {
+    transform: rotateY(0deg);
+}
+
 .phone {
     width: 220px;
     height: 440px;
     transform: rotateY(5deg);
+}
+
+.phone:hover {
+    transform: rotateY(0deg);
 }
 
 .device-frame {

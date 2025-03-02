@@ -7,6 +7,7 @@
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
     <link rel="stylesheet" href="styles.css?v=202503020020">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <nav>
@@ -19,22 +20,241 @@
         </ul>
     </nav>
 
-    <div class="floating-icons">
+    <!-- <div class="floating-icons">
         <i class="fas fa-robot floating-icon icon-bot"></i>
         <i class="fas fa-heartbeat floating-icon icon-heart"></i>
         <i class="fas fa-chart-line floating-icon icon-activity"></i>
-    </div>
+    </div> -->
 
-    <section class="hero" id="home">
+    <!-- <section class="hero" id="home">
         <div class="hero-content">
-            <h1 class="gradient-text">The Future of Healthcare Automation</h1>
-            <p>Experience revolutionary healthcare technology that combines robotics and autonomous systems for streamlined medical checks and patient care.</p>
-            <a href="#features" class="cta-button">
+            <h1 class="gradient-text" data-aos="fade-up">The Future of Healthcare Automation</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Experience revolutionary healthcare technology that combines robotics and autonomous systems for streamlined medical checks and patient care.</p>
+            <a href="#features" class="cta-button" data-aos="fade-up" data-aos-delay="200">
                 <span>Explore Features <i class="fas fa-arrow-right"></i></span>
             </a>
         </div>
-        <div class="feature-images hero-image">
+        <div class="feature-images hero-image" data-aos="fade-up" data-aos-delay="50">
             <img src="images/healthcare-robot.jpg" alt="Healthcare Robot" class="feature-image" loading="lazy">
+        </div>
+        <div class="scroll-arrow">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section> -->
+    <section class="hero hero-2" id="home">
+        <div class="hero-content">
+            <h1 class="heading" data-aos="fade-up">The Future of Healthcare Automation</h1>
+            <!-- <p data-aos="fade-up" data-aos-delay="200">Experience revolutionary healthcare technology that combines robotics and autonomous systems for streamlined medical checks and patient care.</p> -->
+            <a href="#features" class="cta-button" data-aos="fade-up" data-aos-delay="200">
+                <span>Explore Features <i class="fas fa-arrow-right"></i></span>
+            </a>
+        </div>
+        <div class="device tablet">
+            <div class="device-frame">
+                <div class="device-screen">
+                    <div class="app-interface">
+                        <div class="app-header">
+                            <div class="app-logo">MedicBot</div>
+                            <div class="app-user">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="app-dashboard">
+                            <h3>Patient Dashboard</h3>
+                            <div class="dashboard-stats">
+                                <div class="stat-card">
+                                    <i class="fas fa-temperature-high"></i>
+                                    <div class="stat-value">98.6°F</div>
+                                    <div class="stat-label">Temperature</div>
+                                </div>
+                                <div class="stat-card">
+                                    <i class="fas fa-heartbeat"></i>
+                                    <div class="stat-value">72 BPM</div>
+                                    <div class="stat-label">Heart Rate</div>
+                                </div>
+                                <div class="stat-card">
+                                    <i class="fas fa-lungs"></i>
+                                    <div class="stat-value">98%</div>
+                                    <div class="stat-label">SpO2</div>
+                                </div>
+                                <div class="stat-card">
+                                    <i class="fas fa-stethoscope"></i>
+                                    <div class="stat-value">120/80</div>
+                                    <div class="stat-label">Blood Pressure</div>
+                                </div>
+                            </div>
+                            
+                            <div class="app-tabs">
+                                <div class="tab-header">
+                                    <div class="tab-btn active">Vitals</div>
+                                    <div class="tab-btn">Diagnostics</div>
+                                    <div class="tab-btn">Reports</div>
+                                </div>
+                                
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="vitals-tab">
+                                        <div class="patient-info">
+                                            <div class="patient-header">
+                                                <div class="patient-avatar">
+                                                    <i class="fas fa-user"></i>
+                                                </div>
+                                                <div class="patient-details">
+                                                    <h4>John Smith</h4>
+                                                    <p>ID: #12345 • Age: 42 • Room: 302</p>
+                                                </div>
+                                                <div class="patient-status normal">
+                                                    <span>Normal</span>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="vitals-history">
+                                                <h4>Recent Measurements</h4>
+                                                <div class="history-item">
+                                                    <div class="history-time">Today, 9:30 AM</div>
+                                                    <div class="history-values">
+                                                        <span><i class="fas fa-temperature-high"></i> 98.6°F</span>
+                                                        <span><i class="fas fa-heartbeat"></i> 72 BPM</span>
+                                                        <span><i class="fas fa-lungs"></i> 98%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="history-item">
+                                                    <div class="history-time">Yesterday, 4:15 PM</div>
+                                                    <div class="history-values">
+                                                        <span><i class="fas fa-temperature-high"></i> 98.8°F</span>
+                                                        <span><i class="fas fa-heartbeat"></i> 75 BPM</span>
+                                                        <span><i class="fas fa-lungs"></i> 97%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tab-pane" id="diagnostics-tab">
+                                        <div class="diagnostics-container">
+                                            <div class="diagnostics-header">
+                                                <h4>AI-Powered Diagnostics</h4>
+                                                <div class="diagnostics-date">Last updated: Today, 9:35 AM</div>
+                                            </div>
+                                            
+                                            <div class="diagnostics-summary">
+                                                <div class="summary-item normal">
+                                                    <div class="summary-icon">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="summary-details">
+                                                        <h5>Vital Signs</h5>
+                                                        <p>All measurements within normal range</p>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="summary-item warning">
+                                                    <div class="summary-icon">
+                                                        <i class="fas fa-exclamation-triangle"></i>
+                                                    </div>
+                                                    <div class="summary-details">
+                                                        <h5>Blood Pressure</h5>
+                                                        <p>Slightly elevated compared to baseline</p>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="summary-item normal">
+                                                    <div class="summary-icon">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="summary-details">
+                                                        <h5>Heart Rate Variability</h5>
+                                                        <p>Normal pattern detected</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="diagnostics-recommendations">
+                                                <h4>Recommendations</h4>
+                                                <ul class="recommendations-list">
+                                                    <li>
+                                                        <i class="fas fa-clipboard-check"></i>
+                                                        <span>Continue regular monitoring</span>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fas fa-pills"></i>
+                                                        <span>Review current medication schedule</span>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fas fa-file-medical"></i>
+                                                        <span>Schedule follow-up in 2 weeks</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tab-pane" id="reports-tab">
+                                        <div class="reports-container">
+                                            <div class="reports-header">
+                                                <h4>Patient Reports</h4>
+                                                <div class="reports-filter">
+                                                    <select>
+                                                        <option>Last 7 days</option>
+                                                        <option>Last 30 days</option>
+                                                        <option>Last 90 days</option>
+                                                        <option>Custom range</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="reports-list">
+                                                <div class="report-item">
+                                                    <div class="report-icon">
+                                                        <i class="fas fa-file-medical"></i>
+                                                    </div>
+                                                    <div class="report-details">
+                                                        <h5>Comprehensive Health Assessment</h5>
+                                                        <p>Generated on May 15, 2023</p>
+                                                    </div>
+                                                    <div class="report-actions">
+                                                        <button class="report-btn"><i class="fas fa-download"></i></button>
+                                                        <button class="report-btn"><i class="fas fa-share-alt"></i></button>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="report-item">
+                                                    <div class="report-icon">
+                                                        <i class="fas fa-heartbeat"></i>
+                                                    </div>
+                                                    <div class="report-details">
+                                                        <h5>Cardiovascular Analysis</h5>
+                                                        <p>Generated on May 10, 2023</p>
+                                                    </div>
+                                                    <div class="report-actions">
+                                                        <button class="report-btn"><i class="fas fa-download"></i></button>
+                                                        <button class="report-btn"><i class="fas fa-share-alt"></i></button>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="report-item">
+                                                    <div class="report-icon">
+                                                        <i class="fas fa-chart-line"></i>
+                                                    </div>
+                                                    <div class="report-details">
+                                                        <h5>Trend Analysis Report</h5>
+                                                        <p>Generated on May 5, 2023</p>
+                                                    </div>
+                                                    <div class="report-actions">
+                                                        <button class="report-btn"><i class="fas fa-download"></i></button>
+                                                        <button class="report-btn"><i class="fas fa-share-alt"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="device-home"></div>
         </div>
         <div class="scroll-arrow">
             <i class="fas fa-chevron-down"></i>
@@ -694,6 +914,10 @@
         </div>
     </section>
     
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
